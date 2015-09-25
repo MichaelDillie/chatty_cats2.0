@@ -1,11 +1,16 @@
 'use strict';
-
+var Backbone = require('backbone');
 var $ = require('jquery');
-var _ = require('backbone/node_modules/underscore');
+var chatCollection = require('./collections/listCollection.js');
+var chatView = require('./views/listView.js');
+var chatModel = require('./models/listModel.js');
+var chatView = require('./views/listView.js');
+var indChat = require('./views/indChat.js');
 
-$(document).ready(function() {
-console.log('ready');
+var chatCollection = new chatCollection();
+var chatModel = new chatModel();
+var chatView = new chatView();
+var indChat = new indChat({model: chatModel});
 
-
-
-});
+$('#main').append(chatView.$el);
+$('#chatView').append(indChat.$el);

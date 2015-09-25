@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Chatty Cats 2.0</title>
-	<!-- CSS Link -->
+<title>Chatty Cats 2.0</title>
 	<link rel="stylesheet" type="text/css" href="/styles/main.sass.css">
-	<!-- Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<div id="main">
+	
+</div>
+<div id="chatBar">
+	<input type="text" id="chatBox" placeholder="Get Chatty">
+	<button id="submitChat">Chat</button>
+</div>
 
-	<nav>
-		<a href="#/Home">
-			<div id="logo">CC 2.0</div>
-		</a>
-
-			<div id="profile-button"></div>
-	</nav>
-
-	<div id="make-you-profile">
-		<div>Make Your Profile</div>
-		<button>Start</button>
-	</div>
-
-	<div id="join-a-chat">
-		<div>Join A Chat</div>
-		<button>Chat</button>
-	</div>
-
-	<button id="learn-more">Learn More</button>
-
-
-<script type="text/javascript" src="/scripts/bundle.js"></script>
 </body>
+<!-- main chat window -->
+	<script type="text/template" id="listTemplate">
+		<div id="chatView">hello</div>
+	</script>
+	<!-- individual chat -->
+	<script type="text/template" id="indChat">
+		<div id="indChat"><%=chat%></div>
+	</script>
+
+	<script type="text/javascript" src="/scripts/bundle.js"></script>
 </html>
