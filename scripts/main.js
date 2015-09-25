@@ -22,7 +22,7 @@ setInterval(function() {
 $.get (
 	'https://chatty-cats.herokuapp.com/chats',
 	function(show) {
-		$('#main').html('');
+		$('#chatView').html('');
 		$('#main').append(chatView.$el);
 		console.log('hello');
 			for(var i=0; i<show.length; i++) {
@@ -33,6 +33,17 @@ $.get (
 	)
 	
 }, 2000);
+
+var addChat = function(e) {
+	e.preventDefault();
+	$.post (
+			'https://chatty-cats.herokuapp.com/chats',
+			{message: $('#chatBox').val()
+
+		}
+
+		)
+}
 
 // setInterval(function() {
 // 	$.ajax({
@@ -52,7 +63,6 @@ $.get (
 // 	});
 // }, 2000);
 
-$
-$('#chatView').append(indChat.$el);
-
+$('#chatForm').on('submit', addChat);
+$('#submitChat').on('click', addChat);
 });

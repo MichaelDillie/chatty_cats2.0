@@ -17,11 +17,14 @@
 			<div id="profile-button"></div>
 	</nav>
 	<section>
+	<img id="usersPop" src="./images/usertab.png"/>
 		<div id="main">
 		</div>
 		<div id="chatBar">
+		<form id="chatForm">
 			<input type="text" id="chatBox" placeholder="Get Chatty">
 			<button id="submitChat">Chat</button>
+		</form>
 		</div>
 	</section>
 	<section>
@@ -44,7 +47,7 @@
 </script>
 <!-- individual chat -->
 <script type="text/template" id="indChat">
-	<div id="indChat"><%=message%></div>
+	<div id="indChat" class="singleChatClass"><%=message%></div>
 </script>
 <script type="text/javascript" src="/scripts/bundle.js"></script>
 
