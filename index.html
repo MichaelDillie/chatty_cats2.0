@@ -5,8 +5,8 @@
 	<!-- CSS Link -->
 	<link rel="stylesheet" type="text/css" href="/styles/main.sass.css">
 	<!-- Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
 </head>
 <body>
 <!-- Nav -->
@@ -43,14 +43,15 @@
 		<button id="learn-more">Learn More</button>
 	</section>
 
-<script type="text/javascript" src="/scripts/bundle.js"></script>
 <!-- main chat window -->
 <script type="text/template" id="listTemplate">
 	<div id="chatView">hello</div>
 </script>
 <!-- individual chat -->
 <script type="text/template" id="indChat">
-	<div id="indChat"><%=chat%></div>
+	<div id="indChat"><%=message%></div>
 </script>
+<script type="text/javascript" src="/scripts/bundle.js"></script>
+
 </body>
 </html>
