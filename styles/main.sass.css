@@ -1,0 +1,11 @@
+#chatPage {
+  display: none; }
+
+nav {
+  height: 4em;
+  background-color: #9888A5; }
+  nav a {
+    text-decoration: none; }
+  nav #logo {
+    font-family: 'Bubblegum Sans', cursive;
+    color: #445552; }

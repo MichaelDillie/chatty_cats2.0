@@ -3,6 +3,13 @@
 var Backbone = require('backbone');
 var _ = require('backbone/node_modules/underscore');
 var $ = require('jquery');
+
+// var homeCollection = require('./collections/homeCollection.js');
+var makeYourProfileView = require('./views/makeYourProfileView.js');
+// var joinAChatView = require('./views/joinAChatView.js');
+// var learnMoreView = require('./views/learnMoreView.js');
+var makeYourProfileModel = require('./models/makeYourProfileModel.js');
+
 var chatCollection = require('./collections/listCollection.js');
 var chatView = require('./views/listView.js');
 var chatModel = require('./models/listModel.js');
@@ -14,9 +21,18 @@ var chatModel = new chatModel();
 var chatView = new chatView();
 var indChat = new indChat({model: chatModel});
 
-$(document).ready(function() {
-console.log('ready');
 
+$(document).ready(function() {
+	console.log('ready');
+
+
+	var $makeYourProfile = $('#make-your-profile');
+	var $joniAChat = $('#join-a-chat');
+	var $learnMore = $('#learn-more');
+	var $startButton = $('#start-button');
+
+
+	var profileView = new makeYourProfileView();
 
 setInterval(function() {
 $.get (
@@ -31,7 +47,7 @@ $.get (
 		},
 		'json'
 	)
-	
+
 }, 2000);
 
 // setInterval(function() {
@@ -52,7 +68,8 @@ $.get (
 // 	});
 // }, 2000);
 
-$
+
 $('#chatView').append(indChat.$el);
+
 
 });
