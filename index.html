@@ -16,20 +16,36 @@
 
 			<div id="profile-button"></div>
 	</nav>
+	<section>
+		<div id="main">
+		</div>
+		<div id="chatBar">
+			<input type="text" id="chatBox" placeholder="Get Chatty">
+			<button id="submitChat">Chat</button>
+		</div>
+	</section>
+	<section>
+		<div id="make-you-profile">
+			<div>Make Your Profile</div>
+			<button>Start</button>
+		</div>
 
-	<div id="make-you-profile">
-		<div>Make Your Profile</div>
-		<button>Start</button>
-	</div>
+		<div id="join-a-chat">
+			<div>Join A Chat</div>
+			<button>Chat</button>
+		</div>
 
-	<div id="join-a-chat">
-		<div>Join A Chat</div>
-		<button>Chat</button>
-	</div>
-
-	<button id="learn-more">Learn More</button>
-
+		<button id="learn-more">Learn More</button>
+	</section>
 
 <script type="text/javascript" src="/scripts/bundle.js"></script>
+<!-- main chat window -->
+<script type="text/template" id="listTemplate">
+	<div id="chatView">hello</div>
+</script>
+<!-- individual chat -->
+<script type="text/template" id="indChat">
+	<div id="indChat"><%=chat%></div>
+</script>
 </body>
 </html>
