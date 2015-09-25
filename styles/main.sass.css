@@ -7,3 +7,13 @@
   height: 2em;
   width: 2em;
   float: right; }
+
+#newChatView {
+  display: none;
+  float: right;
+  margin: 5% auto;
+  background: blue;
+  text-align: center;
+  padding: 2em 0;
+  margin: 0 auto;
+  width: 50%; }
