@@ -17,7 +17,42 @@ var indChat = new indChat({model: chatModel});
 $(document).ready(function() {
 console.log('ready');
 
-$('#main').append(chatView.$el);
+
+setInterval(function() {
+$.get (
+	'https://chatty-cats.herokuapp.com/chats',
+	function(show) {
+		$('#main').html('');
+		$('#main').append(chatView.$el);
+		console.log('hello');
+			for(var i=0; i<show.length; i++) {
+				$('#chatView').append('<div>' + show[i].user_id + ': ' + show[i].message + '</div>');
+			}
+		},
+		'json'
+	)
+	
+}, 2000);
+
+// setInterval(function() {
+// 	$.ajax({
+// 		method: 'GET',
+// 		accepts: 'json',
+// 		url: 'https://chatty-cats.herokuapp.com/chats',
+// 		success: function(show) {
+// 			$('#main').html('');
+// 			console.log('hello');
+// 			for(var i=0; i<show.length; i++) {
+// 				$('#chatView').append('<div>' + show[i].user_id + ': ' + show[i].message + '</div>');
+// 			}
+// 		},
+// 		headers: {
+// 			'Cache-Control': 'no-cache'
+// 		}
+// 	});
+// }, 2000);
+
+$
 $('#chatView').append(indChat.$el);
 
 });
