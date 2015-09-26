@@ -5,8 +5,7 @@
 	<!-- CSS Link -->
 	<link rel="stylesheet" type="text/css" href="/styles/main.sass.css">
 	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,900,300,100" rel="stylesheet" type="text/css">
 </head>
 <body>
 <!-- Nav -->
@@ -27,21 +26,47 @@
 		</div>
 	</section>
 	<!-- Home Page -->
-	<section id="home-page">
-		<div id="make-your-profile">
-			<div>Make Your Profile</div>
-			<div class="description">It's fun, free, and easy</div>
-			<button id="start-button">Start</button>
-		</div>
-
-		<div id="join-a-chat">
-			<div>Join A Chat</div>
-			<div class="description">Jump right into your favorite chat</div>
-			<button>Chat</button>
-		</div>
-
-		<button id="learn-more">Learn More</button>
-	</section>
+<!-- 	<a href="#home"> -->
+		<section id="home-page">
+			<div id="make-your-profile">
+				<div>Make Your Profile</div>
+				<div id="password-error">Passwords didn't match</div>
+				<div class="description">It's fun, free, and easy</div>
+				<input type="text" placeholder="Your Name" class="make-profile-name">
+				<input type="text" placeholder="Your Username" class="make-profile-username">
+				<input type="text" placeholder="Your Email" class="make-profile-email">
+				<input type="password" placeholder="Password" class="make-profile-password">
+				<input type="password" placeholder="Retype Password" class="make-profile-retype">
+				<button id="start-button">Start</button>
+				<form id="make-profile-form">
+					<button id="join">Join</button>
+				</form>
+				<button id="cancel-profile">Cancel</button>
+			</div>
+		<section id="Chat">
+			<div id="join-a-chat">
+				<div>Join A Chat</div>
+				<div class="description">Jump right into your favorite chat</div>
+				<a href="#Chat">
+					<button id="chat-button">Chat</button>
+				</a>
+			</div>
+		</section>
+			<div id="learn-more-tablet">
+				<div>Learn More</div>
+				<div class="description">Learn more about you favorite chat app</div>
+				<button id="learn-more-btn-tablet">Learn More</button>
+			</div>
+			<button id="learn-more">Learn More</button>
+			<div id="learn-more-page">
+				<div>Learn More</div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id quam pulvinar, pretium tortor ut, ullamcorper nisl. Nam aliquet maximus orci non lobortis. Aliquam pellentesque ligula ac erat pharetra, blandit vehicula mauris posuere. Sed dignissim tellus leo, a semper felis congue sed. Duis ut mollis urna. Nunc vitae turpis nec odio efficitur lobortis ut et tellus. Cras quis scelerisque turpis. Fusce a nunc felis.
+				</p>
+				<button id="close">Close</button>
+			</div>
+		</section>
+<!-- 	</a> -->
 
 <!-- main chat window -->
 <script type="text/template" id="listTemplate">

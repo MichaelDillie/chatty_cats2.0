@@ -1,3 +1,12 @@
+body {
+ background-color: #706360;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
 #chatPage {
 	display: none;
 }
@@ -14,4 +23,212 @@ nav {
 		font-family: 'Bubblegum Sans', cursive;
 		color: #445552;
 	}
+}
 
+#make-your-profile {
+    background-color: #10A4A2;
+    height: 9em;
+    margin: 1em 0.5em;
+    text-align: center;
+    padding-top: 1em;
+
+    div {
+    	font-family: 'Roboto', sans-serif;
+    	font-weight: 900;
+    	font-size: 2em;
+    	line-height: 1em;
+    }
+
+    #password-error {
+    	display: none;
+		color: #300000;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 100;
+		font-size: 1em;
+	}
+
+    .description {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+    	font-size: 1em;
+    }
+
+    #start-button {
+    	background-color: #FBEDDA;
+    	border: .01em solid;
+	    margin-top: 1.5em;
+	    font-size: 1.5em;
+	    font-family: 'Roboto', sans-serif;
+	    padding: .1em .75em;
+	}
+
+	#make-profile-form {
+		display: inline-block;
+	}
+
+	#join {
+		background-color: #FBEDDA;
+		display: none;
+		border: .01em solid;
+	    margin-top: 1.5em;
+	    font-size: 1.5em;
+	    font-family: 'Roboto', sans-serif;
+	    padding: .1em .75em;
+	}
+
+	#cancel-profile {
+		background-color: #FBEDDA;
+		display: none;
+		border: .01em solid;
+	    margin-top: 1.5em;
+	    font-size: 1.5em;
+	    font-family: 'Roboto', sans-serif;
+	    padding: .1em .75em;
+	}
+
+	.make-profile-name {
+		display: none;
+	}
+	.make-profile-username {
+		display: none;
+	}
+	.make-profile-email {
+		display: none;
+	}
+	.make-profile-password {
+		display: none;
+	}
+	.make-profile-retype {
+		display: none;
+	}
+
+}
+
+#join-a-chat {
+    background-color: #10A4A2;
+    height: 9em;
+    margin: 1em 0.5em;
+    text-align: center;
+    padding-top: 1em;
+
+    div {
+    	font-family: 'Roboto', sans-serif;
+    	font-weight: 900;
+    	font-size: 2em;
+    	line-height: 1em;
+    }
+
+    .description {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+    	font-size: 1em;
+    }
+
+    #chat-button {
+    	background-color: #FBEDDA;
+    	border: .01em solid;
+	    margin-top: 1.5em;
+	    font-size: 1.5em;
+	    font-family: 'PT Sans', sans-serif;
+	    padding: .1em .75em;
+	}
+}
+
+#learn-more {
+	background-color: #FBEDDA;
+	border: .01em solid;
+    margin: .5em 3.15em;
+    font-size: 1.5em;
+    font-family: 'PT Sans', sans-serif;
+    padding: .1em .75em;
+}
+
+#learn-more-page {
+	display: none;
+	background-color: #10A4A2;
+	height: 25em;
+	margin: 1em 0.5em;
+	padding: 1em 1em 0 1em;
+	text-align: center;
+
+	div {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 900;
+		font-size: 2em;
+
+	}
+
+	p {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 300;
+		border: .1em solid black;
+	}
+
+	#close {
+		background-color: #FBEDDA;
+		border: .01em solid;
+	    margin-top: .5em;
+	    font-size: 1.5em;
+	    font-family: 'PT Sans', sans-serif;
+	    padding: .1em .75em;
+	}
+}
+
+#learn-more-tablet {
+	display: none;
+}
+
+@media screen and(min-width: 768px) {
+	#make-your-profile {
+	    width: 31%;
+	    display: inline-block;
+	    height: 20em;
+	    float: left;
+	}
+
+	#join-a-chat {
+	 	width: 31%;
+	    display: inline-block;
+    	height: 20em;
+    	float: left;
+
+    	#chat-button {
+    		margin-top: 2.75em;
+    	}
+	}
+
+	#learn-more-tablet {
+		width: 31%;
+		display: inline-block;
+		height: 20em;
+		background-color: #10A4A2;
+    	margin: 1em 0.5em;
+    	text-align: center;
+    	padding-top: 1em;
+
+    	div {
+    		font-family: 'Roboto', sans-serif;
+			font-weight: 900;
+			font-size: 2em;
+    	}
+
+    	.description {
+        	font-family: 'Roboto', sans-serif;
+        	font-weight: 300;
+    		font-size: 1em;
+    	}
+
+    	#learn-more-btn-tablet {
+			background-color: #FBEDDA;
+    		border: .01em solid;
+	    	margin-top: 1.5em;
+	    	font-size: 1.5em;
+	    	font-family: 'Roboto', sans-serif;
+	 	   	padding: .1em .75em;
+    	}
+	}
+
+	#learn-more {
+		display: none;
+	}
+}
