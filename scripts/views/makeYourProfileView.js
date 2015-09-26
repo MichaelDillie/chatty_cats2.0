@@ -14,12 +14,20 @@ module.exports = Backbone.View.extend({
 		var $learnMore = $('#learn-more');
 		var $startButton = $('#start-button');
 		var $description = $('.description');
+		var $name = $('.make-profile-name');
 		var $userName = $('.make-profile-username');
 		var $email = $('.make-profile-email');
 		var $password = $('.make-profile-password');
 		var $retype = $('.make-profile-retype');
 		var $joinBtn = $('#join');
 		var $cancelBtn = $('#cancel-profile');
+		var name = $name.val();
+		var userName = $userName.val();
+		var email = $email.val();
+		var password = $password.val();
+		var retype = $retype.val();
+		var $passwordError = $('#password-error');
+		var $form = $('#make-profile-form')
 	 	function onStartClick() {
 			$joinAChat.hide();
 			$learnMore.hide();
@@ -35,10 +43,21 @@ module.exports = Backbone.View.extend({
 				marginLeft: '.25em'
 			});
 			$startButton.hide();
-			$userName.css({
+
+			$name.show();
+			$name.css({
 				display: 'block',
 				margin: '0 auto',
 				marginTop: '2em',
+				marginBottom: '0em',
+				width: '10em',
+				fontSize: '1.5em'
+			});
+
+			$userName.css({
+				display: 'block',
+				margin: '0 auto',
+				marginTop: '.75em',
 				marginBottom: '0em',
 				width: '10em',
 				fontSize: '1.5em'
@@ -48,7 +67,7 @@ module.exports = Backbone.View.extend({
 			$email.css({
 				display: 'block',
 				margin: '0 auto',
-				marginTop: '1.3em',
+				marginTop: '.75em',
 				marginBottom: '0em',
 				width: '10em',
 				fontSize: '1.5em'
@@ -58,7 +77,7 @@ module.exports = Backbone.View.extend({
 			$password.css({
 				display: 'block',
 				margin: '0 auto',
-				marginTop: '1.3em',
+				marginTop: '.75em',
 				marginBottom: '0em',
 				width: '10em',
 				fontSize: '1.5em'
@@ -67,7 +86,7 @@ module.exports = Backbone.View.extend({
 			$retype.css({
 				display: 'block',
 				margin: '0 auto',
-				marginTop: '1.3em',
+				marginTop: '.75em',
 				marginBottom: '0em',
 				width: '10em',
 				fontSize: '1.5em'
@@ -79,6 +98,7 @@ module.exports = Backbone.View.extend({
 			$joinAChat.show();
 			$learnMore.show();
 			$description.show();
+			$name.hide();
 			$userName.hide();
 			$startButton.show();
 			$email.hide();
@@ -89,6 +109,32 @@ module.exports = Backbone.View.extend({
 			$makeYourProfile.css('height', '9em');
 		}
 		$cancelBtn.on('click', onCancelClick);
-	}
 
+		$form.submit(function(e) {
+			e.preventDefault();
+			var name = $name.val();
+			var userName = $userName.val();
+			var email = $email.val();
+			var password = $password.val();
+			var retype = $retype.val();
+			var $passwordError = $('#password-error');
+
+			if(password === retype) {
+				console.log('good')
+				$passwordError.hide();
+
+				$.post(
+					'https://chatty-cats.herokuapp.com/users', {
+						name: name,
+						username: userName,
+						email: email,
+						about: password
+					}
+				)
+			} else {
+				$passwordError.show();
+
+			}
+		});
+	}
 });

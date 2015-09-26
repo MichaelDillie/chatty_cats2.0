@@ -37,6 +37,7 @@ $(document).ready(function() {
 	var $description = $('.description');
 	var $chatButton = $('#chat-button');
 
+	var $chatPage = $('#chatPage');
 	var $main = $('#main');
 	var $chatBar = $('#chatBar');
 	var $chatBox = $('#chatBox');
@@ -50,10 +51,21 @@ $(document).ready(function() {
 
 	var Router = Backbone.Router.extend({
 		routes:  {
-			chatPage: 'onChatPage'
+			'': 'home',
+			'Chat': 'onChatPage'
+		},
+		home: function() {
+			$makeYourProfile.show();
+			$learnMore.show();
+			$joniAChat.show();
+			$chatPage.hide();
 		},
 		onChatPage: function() {
-			$('button').hide();
+			console.log('router test');
+			$makeYourProfile.hide();
+			$learnMore.hide();
+			$joniAChat.hide();
+			$chatPage.show();
 		}
 	});
 	var foo = new Router();

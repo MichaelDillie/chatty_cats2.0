@@ -1,6 +1,10 @@
 body {
   background-color: #706360; }
 
+a {
+  text-decoration: none;
+  color: black; }
+
 #chatPage {
   display: none; }
 
@@ -59,6 +63,8 @@ nav {
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
     padding: 0.1em 0.75em; }
+  #make-your-profile .make-profile-name {
+    display: none; }
   #make-your-profile .make-profile-username {
     display: none; }
   #make-your-profile .make-profile-email {
@@ -94,8 +100,7 @@ nav {
 #learn-more {
   background-color: #FBEDDA;
   border: .01em solid;
-  margin-top: .5em;
-  margin-left: 3em;
+  margin: 0.5em 3.15em;
   font-size: 1.5em;
   font-family: 'PT Sans', sans-serif;
   padding: 0.1em 0.75em; }
@@ -123,16 +128,44 @@ nav {
     font-family: 'PT Sans', sans-serif;
     padding: 0.1em 0.75em; }
 
+#learn-more-tablet {
+  display: none; }
+
 @media screen and (min-width: 768px) {
   #make-your-profile {
-    width: 33%;
+    width: 31%;
     display: inline-block;
     height: 20em;
     float: left; }
   #join-a-chat {
-    width: 33%;
+    width: 31%;
     display: inline-block;
-    height: 20em; }
+    height: 20em;
+    float: left; }
+    #join-a-chat #chat-button {
+      margin-top: 2.75em; }
+  #learn-more-tablet {
+    width: 31%;
+    display: inline-block;
+    height: 20em;
+    background-color: #10A4A2;
+    margin: 1em 0.5em;
+    text-align: center;
+    padding-top: 1em; }
+    #learn-more-tablet div {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 900;
+      font-size: 2em; }
+    #learn-more-tablet .description {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1em; }
+    #learn-more-tablet #learn-more-btn-tablet {
+      background-color: #FBEDDA;
+      border: .01em solid;
+      margin-top: 1.5em;
+      font-size: 1.5em;
+      font-family: 'Roboto', sans-serif;
+      padding: 0.1em 0.75em; }
   #learn-more {
-    display: inline-block;
-    margin-left: 0em; } }
+    display: none; } }
