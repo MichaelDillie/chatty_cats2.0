@@ -1,19 +1,27 @@
 'use strict';
-var Backbone = require('backbone');
 var $ = require('jquery');
+var Backbone = require('backbone');
 var _ = require('backbone/node_modules/underscore');
+var listModel = require('../models/listModel.js');
+
+
 module.exports = Backbone.View.extend({
 	tagName: 'div',
-	template: _.template($('#listTemplate').html()),
+	// template: _.template($('#listTemplate').html()),
 
 	initialize: function() {
-		console.log('i am a view');
+		_.bindAll(
+			this,
+			'render'
+		);
+		console.log('initialized');
 		this.render();
+		this.model.on('change', this.render);
 	},
 	render: function (){
-        this.$el.html(this.template());
-        return this;
-        console.log('i am rendering');
-	}
+		console.log('i am rendering');
+        this.$el.html('<div>' + this.model.get('user_id') + ':' + this.model.get('message') + '</div>');
+        
+	},
 
 });
