@@ -14,6 +14,9 @@ template: _.template($('#indChat').html()),
         this.$el.html(this.template(this.model.toJSON()));
         return this;
         console.log('i am rendering');
+        this.$el.on('click', directUser);
+        
 	}
+
 
 });

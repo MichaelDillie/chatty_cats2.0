@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+#main {
+	background: {
+		color: pink;
+		overflow-y: hidden;
+	}
+}
+#usersPop {
+	background: transparent;
+	height: 2em;
+	width: 2em;
+	float: right;
+	
+
+}
+#chatBar {
+
+}
+#newChatView {
+	display: none;
+	float: right;
+	margin: 5% auto;
+	background: pink;
+	text-align: center;
+	padding: 2em 0;
+	margin: 0 auto;
+	width: 50%;
+	border: 1px solid black;
+}
+=======
 body {
  background-color: #706360;
 }
@@ -232,3 +262,4 @@ nav {
 		display: none;
 	}
 }
+>>>>>>> daca43978dce6ac91cfe7d80bb0072748a81d390
