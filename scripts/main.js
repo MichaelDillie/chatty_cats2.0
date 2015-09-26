@@ -4,6 +4,16 @@ var Backbone = require('backbone');
 var _ = require('backbone/node_modules/underscore');
 
 var collection = require('./collections/listCollection.js');
+var $ = require('jquery');
+
+//***************Home Page**********************
+
+// var homeCollection = require('./collections/homeCollection.js');
+var makeYourProfileView = require('./views/makeYourProfileView.js');
+var joinAChatView = require('./views/joinAChatView.js');
+var learnMoreView = require('./views/learnMoreView.js');
+var makeYourProfileModel = require('./models/makeYourProfileModel.js');
+
 var chatView = require('./views/listView.js');
 var chatModel = require('./models/listModel.js');
 
@@ -11,8 +21,11 @@ var chatModel = require('./models/listModel.js');
 // var chatModel = new chatModel({collection: chatCollection});
 // var chatView = new chatView({model: chatModel});
 
+
 $(document).ready(function() {
-console.log('ready');
+	console.log('ready');
+
+//***************Home Page**********************
 
 var messageCollection = new collection();
 
@@ -42,6 +55,52 @@ messageCollection.fetch();
 
 
 	// var profileView = new makeYourProfileView();
+	var $makeYourProfile = $('#make-your-profile');
+	var $joniAChat = $('#join-a-chat');
+	var $learnMore = $('#learn-more');
+	var $startButton = $('#start-button');
+	var $description = $('.description');
+	var $chatButton = $('#chat-button');
+
+	var $chatPage = $('#chatPage');
+	var $main = $('#main');
+	var $chatBar = $('#chatBar');
+	var $chatBox = $('#chatBox');
+	var $submitChat = $('#submitChat');
+
+
+	var profileView = new makeYourProfileView();
+	var learnMoreViewing = new learnMoreView();
+	// var chatView = new joinAChatView();
+	// var chatView = new joinAChatView();
+
+	var Router = Backbone.Router.extend({
+		routes:  {
+			'': 'home',
+			'Chat': 'onChatPage'
+		},
+		home: function() {
+			$makeYourProfile.show();
+			$learnMore.show();
+			$joniAChat.show();
+			$chatPage.hide();
+		},
+		onChatPage: function() {
+			console.log('router test');
+			$makeYourProfile.hide();
+			$learnMore.hide();
+			$joniAChat.hide();
+			$chatPage.show();
+		}
+	});
+	var foo = new Router();
+	Backbone.history.start();
+
+
+  		// Backbone.history.start({hashChange: false});
+
+//****************Chat Page**********************
+
 
 // setInterval(function() {
 // $.get (
@@ -93,3 +152,5 @@ $('#usersPop').on('click', newChat);
 $('#chatForm').on('submit', addChat);
 $('#submitChat').on('click', addChat);
 });
+
+
