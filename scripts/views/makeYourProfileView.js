@@ -4,11 +4,6 @@ var $ = require('jquery');
 
 module.exports = Backbone.View.extend({
 	initialize: function() {
-		// _.bindAll (
-		// 	this,
-		// 	'render',
-		// 	'onStartClick'
-		// )
 
 		this.render();
 		console.log('check');
@@ -23,12 +18,23 @@ module.exports = Backbone.View.extend({
 		var $email = $('.make-profile-email');
 		var $password = $('.make-profile-password');
 		var $retype = $('.make-profile-retype');
+		var $joinBtn = $('#join');
+		var $cancelBtn = $('#cancel-profile');
 	 	function onStartClick() {
 			$joinAChat.hide();
 			$learnMore.hide();
 			$description.hide();
 			$makeYourProfile.css('height', '26em');
 			$userName.show();
+			$joinBtn.css({
+				display: 'inline-block',
+				marginRight: '.25em'
+			});
+			$cancelBtn.css({
+				display: 'inline-block',
+				marginLeft: '.25em'
+			});
+			$startButton.hide();
 			$userName.css({
 				display: 'block',
 				margin: '0 auto',
@@ -68,6 +74,21 @@ module.exports = Backbone.View.extend({
 			});
 		}
 		$startButton.on('click', onStartClick)
+
+		function onCancelClick() {
+			$joinAChat.show();
+			$learnMore.show();
+			$description.show();
+			$userName.hide();
+			$startButton.show();
+			$email.hide();
+			$password.hide();
+			$retype.hide();
+			$cancelBtn.hide();
+			$joinBtn.hide();
+			$makeYourProfile.css('height', '9em');
+		}
+		$cancelBtn.on('click', onCancelClick);
 	}
 
 });
