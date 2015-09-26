@@ -1,3 +1,5 @@
+
+
 #chatPage {
 	display: none;
 }
@@ -14,4 +16,71 @@ nav {
 		font-family: 'Bubblegum Sans', cursive;
 		color: #445552;
 	}
+}
 
+#make-your-profile {
+    background-color: green;
+    height: 9em;
+    margin: 1em 0.5em;
+    text-align: center;
+    padding-top: 1em;
+
+    div {
+    	font-family: 'Bubblegum Sans', cursive;
+    	font-size: 2em;
+    	line-height: 1em;
+    }
+
+    .description {
+        font-family: 'PT Sans', sans-serif;
+    	font-size: 1em;
+    }
+
+    #start-button {
+    	border: .01em solid;
+	    margin-top: 1.5em;
+	    font-size: 1.5em;
+	    font-family: 'PT Sans', sans-serif;
+	    padding: .1em .75em;
+	}
+
+	.make-profile-username {
+		display: none;
+	}
+	.make-profile-email {
+		display: none;
+	}
+	.make-profile-password {
+		display: none;
+	}
+	.make-profile-retype {
+		display: none;
+	}
+}
+
+#join-a-chat {
+    background-color: green;
+    height: 9em;
+    margin: 1em 0.5em;
+    text-align: center;
+    padding-top: 1em;
+
+    div {
+    	font-family: 'Bubblegum Sans', cursive;
+    	font-size: 2em;
+    	line-height: 1em;
+    }
+
+    .description {
+        font-family: 'PT Sans', sans-serif;
+    	font-size: 1em;
+    }
+
+    #chat-button {
+    	border: .01em solid;
+	    margin-top: 1.5em;
+	    font-size: 1.5em;
+	    font-family: 'PT Sans', sans-serif;
+	    padding: .1em .75em;
+	}
+}

@@ -9,3 +9,51 @@ nav {
   nav #logo {
     font-family: 'Bubblegum Sans', cursive;
     color: #445552; }
+
+#make-your-profile {
+  background-color: green;
+  height: 9em;
+  margin: 1em 0.5em;
+  text-align: center;
+  padding-top: 1em; }
+  #make-your-profile div {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 2em;
+    line-height: 1em; }
+  #make-your-profile .description {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em; }
+  #make-your-profile #start-button {
+    border: .01em solid;
+    margin-top: 1.5em;
+    font-size: 1.5em;
+    font-family: 'PT Sans', sans-serif;
+    padding: 0.1em 0.75em; }
+  #make-your-profile .make-profile-username {
+    display: none; }
+  #make-your-profile .make-profile-email {
+    display: none; }
+  #make-your-profile .make-profile-password {
+    display: none; }
+  #make-your-profile .make-profile-retype {
+    display: none; }
+
+#join-a-chat {
+  background-color: green;
+  height: 9em;
+  margin: 1em 0.5em;
+  text-align: center;
+  padding-top: 1em; }
+  #join-a-chat div {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 2em;
+    line-height: 1em; }
+  #join-a-chat .description {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em; }
+  #join-a-chat #chat-button {
+    border: .01em solid;
+    margin-top: 1.5em;
+    font-size: 1.5em;
+    font-family: 'PT Sans', sans-serif;
+    padding: 0.1em 0.75em; }

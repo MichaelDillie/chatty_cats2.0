@@ -4,12 +4,15 @@ var Backbone = require('backbone');
 var _ = require('backbone/node_modules/underscore');
 var $ = require('jquery');
 
+//***************Home Page**********************
+
 // var homeCollection = require('./collections/homeCollection.js');
 var makeYourProfileView = require('./views/makeYourProfileView.js');
 // var joinAChatView = require('./views/joinAChatView.js');
 // var learnMoreView = require('./views/learnMoreView.js');
 var makeYourProfileModel = require('./models/makeYourProfileModel.js');
 
+//****************Chat Page**********************
 var chatCollection = require('./collections/listCollection.js');
 var chatView = require('./views/listView.js');
 var chatModel = require('./models/listModel.js');
@@ -25,6 +28,7 @@ var indChat = new indChat({model: chatModel});
 $(document).ready(function() {
 	console.log('ready');
 
+//***************Home Page**********************
 
 	var $makeYourProfile = $('#make-your-profile');
 	var $joniAChat = $('#join-a-chat');
@@ -33,6 +37,8 @@ $(document).ready(function() {
 
 
 	var profileView = new makeYourProfileView();
+
+//****************Chat Page**********************
 
 setInterval(function() {
 $.get (
