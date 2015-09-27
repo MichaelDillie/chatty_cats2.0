@@ -159,6 +159,30 @@ nav {
     font-family: 'PT Sans', sans-serif;
     padding: 0.1em 0.75em; }
 
+#user-profile #user-profile-pic {
+  height: 7em;
+  width: 7em;
+  background-color: green;
+  margin-left: .5em;
+  margin-top: .5em;
+  float: left; }
+
+#user-profile #users-username {
+  margin-top: .5em;
+  float: right; }
+
+#user-profile #users-name {
+  width: 6.9em;
+  border: .1em solid black;
+  margin-top: .5em;
+  margin-left: .5em; }
+
+#user-profile #users-email {
+  width: 6.9em;
+  border: .1em solid black;
+  margin-top: .5em;
+  margin-left: .5em; }
+
 #learn-more-tablet {
   display: none; }
 
