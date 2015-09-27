@@ -22,6 +22,18 @@ nav {
 	#logo {
 		font-family: 'Bubblegum Sans', cursive;
 		color: #445552;
+		float: left;
+	}
+
+	#profile-button {
+		background-color: transparent;
+	    border: .1em solid;
+	    height: 2.5em;
+	    width: 2.5em;
+	    margin-top: .75em;
+	    float: right;
+	    padding-right: .5em;
+	    margin-right: .3em;
 	}
 }
 
@@ -230,5 +242,14 @@ nav {
 
 	#learn-more {
 		display: none;
+	}
+}
+
+#user-profile {
+
+	#user-profile-pic {
+		height: 7em;
+		width: 7em;
+		background-color: green;
 	}
 }
