@@ -17,13 +17,22 @@
 			<div id="profile-button"><img src="https://maxcdn.icons8.com/Android_L/PNG/24/Users/user-24.png" title="User" width="48" id="img"></div>
 		</a>
 	</nav>
+	<section>
+	<div id="newChatView">
+		<select id="groupSelectDrop"></select>
+		<input type="text" id="newChatInput" placeholder="Name your chat"/>
+		<div><button id="submitNewChat">Submit</button></div>
+	</div>
+	<img id="usersPop" src="./images/usertab.png"/>
 	<!-- Chat Page -->
 	<section id="chatPage">
 		<div id="main">
 		</div>
 		<div id="chatBar">
+		<form id="chatForm">
 			<input type="text" id="chatBox" placeholder="Get Chatty">
 			<button id="submitChat">Chat</button>
+		</form>
 		</div>
 	</section>
 	<!-- Home Page -->
@@ -54,6 +63,7 @@
 				</a>
 			</div>
 		</section>
+		<section>
 			<div id="learn-more-tablet">
 				<div>Learn More</div>
 				<div class="description">Learn more about you favorite chat app</div>
@@ -88,11 +98,14 @@
 
 <!-- main chat window -->
 <script type="text/template" id="listTemplate">
-	<div id="chatView">hello</div>
+	<div id="chatView"></div>
 </script>
 <!-- individual chat -->
 <script type="text/template" id="indChat">
-	<div id="indChat"><%=message%></div>
+	<div id="indChat" class="singleChatClass"><%=message%></div>
+</script>
+<script type="text/template" id="listOfMessages">
+	<div><%- user_id %> : <%- message %></div>
 </script>
 <script type="text/javascript" src="/scripts/bundle.js"></script>
 

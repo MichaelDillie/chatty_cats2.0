@@ -2,13 +2,15 @@
 var Backbone = require('backbone');
 module.exports = Backbone.Model.extend({
 	defaults: {
-        message: 'Hello',
+		room_name: '',
+        message: '',
         user_id: 0,
         room_id: 0,
         created_at: 0,
         updated_at: 0
 	},
-	idAttribute: 'ID'
+	urlRoot: 'https://chatty-cats.herokuapp.com/rooms/3/chats',
+	// idAttribute: 'id'
 
 });
 console.log('i am a model');
