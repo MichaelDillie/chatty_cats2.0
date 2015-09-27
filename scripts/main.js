@@ -15,7 +15,6 @@ var makeYourProfileModel = require('./models/makeYourProfileModel.js');
 
 var chatView = require('./views/listView.js');
 var chatModel = require('./models/listModel.js');
-<<<<<<< HEAD
 var chatView = require('./views/listView.js');
 var indChat = require('./views/indChat.js');
 
@@ -27,8 +26,7 @@ var chatCollection = new chatCollection();
 var chatModel = new chatModel();
 var chatView = new chatView();
 var indChat = new indChat({model: chatModel});
-=======
->>>>>>> f314efbbcc0544073f90893e785d859281b558a6
+
 
 
 var chatroomNum = 3;
