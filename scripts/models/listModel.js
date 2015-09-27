@@ -10,7 +10,7 @@ module.exports = Backbone.Model.extend({
         updated_at: 0
 	},
 	urlRoot: 'https://chatty-cats.herokuapp.com/rooms/3/chats',
-	idAttribute: 'ID'
+	// idAttribute: 'id'
 
 });
 console.log('i am a model');

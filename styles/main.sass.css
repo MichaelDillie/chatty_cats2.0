@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #main {
   background-color: pink;
   background-overflow-y: hidden; }
@@ -19,7 +18,7 @@
   margin: 0 auto;
   width: 50%;
   border: 1px solid black; }
-=======
+
 body {
   background-color: #706360; }
 
@@ -191,4 +190,3 @@ nav {
       padding: 0.1em 0.75em; }
   #learn-more {
     display: none; } }
->>>>>>> daca43978dce6ac91cfe7d80bb0072748a81d390
