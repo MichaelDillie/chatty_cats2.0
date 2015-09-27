@@ -53,7 +53,7 @@ messageCollection.fetch();
 
 	var $makeYourProfile = $('#make-your-profile');
 	var $joniAChat = $('#join-a-chat');
-	var $learnMore = $('#learn-more');
+	var $learnMore = $('#learn-more-btn-wrapper');
 	var $startButton = $('#start-button');
 	var $description = $('.description');
 	var $chatButton = $('#chat-button');
@@ -87,6 +87,7 @@ messageCollection.fetch();
 			$joniAChat.show();
 			$chatPage.hide();
 			$userProfile.hide();
+			$('#usersPop').hide();
 		},
 		onChatPage: function() {
 			$makeYourProfile.hide();
@@ -95,6 +96,8 @@ messageCollection.fetch();
 			$chatPage.show();
 			$userProfile.hide();
 			$learnMorePage.hide();
+			$('#usersPop').show();
+			$learnMoreTablet.hide();
 		},
 		onHome: function() {
 			$makeYourProfile.show();
@@ -102,6 +105,7 @@ messageCollection.fetch();
 			$joniAChat.show();
 			$chatPage.hide();
 			$userProfile.hide();
+			$('#usersPop').hide();
 		},
 		onUserProfile: function() {
 			$makeYourProfile.hide();
@@ -111,6 +115,7 @@ messageCollection.fetch();
 			$userProfile.show();
 			$learnMorePage.hide();
 			$learnMoreTablet.hide();
+			$('#usersPop').hide();
 		}
 	});
 	var foo = new Router();
@@ -148,7 +153,7 @@ var switchGroup = function() {
 			$('#main').append(newChatRoomMessage.$el);
 		});
 	});
-	
+
 
 }
 var createNewGroup = function(e) {
