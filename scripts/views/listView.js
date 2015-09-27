@@ -7,21 +7,30 @@ var listModel = require('../models/listModel.js');
 
 module.exports = Backbone.View.extend({
 	tagName: 'div',
-	// template: _.template($('#listTemplate').html()),
+	template: _.template($('#listOfMessages').html()),
 
 	initialize: function() {
-		_.bindAll(
-			this,
-			'render'
-		);
-		console.log('initialized');
+		// _.bindAll(
+		// 	this,
+		// 	'render'
+		// );
 		this.render();
-		this.model.on('change', this.render);
+		//this.model.on('change', this.render);
 	},
 	render: function (){
-		console.log('i am rendering');
-        this.$el.html('<div>' + this.model.get('user_id') + ':' + this.model.get('message') + '</div>');
-        
-	},
-
+        this.$el.html(this.template(this.model.toJSON()));
+  //       $('#submitNewChat').submit(function(e) {
+		// e.preventDefault();
+		// $.post (
+		// 	'https://chatty-cats.herokuapp.com/chats',
+		// 	{
+		// 	message: $('#chatBox').val(),
+		// 	user_id: 2,
+		// 	room_id: 3
+		// 	}
+			// )
+		
+	// });
+		return this;
+}
 });
