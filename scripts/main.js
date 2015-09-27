@@ -17,6 +17,11 @@ var chatModel = require('./models/listModel.js');
 var chatGoup = require('./models/groupModel.js')
 
 
+//****************User Page**********************
+var userProfileModel = require('./models/userProfileModel.js');
+var	userProfileView = require('./views/userProfileView.js')
+
+
 var chatroomNum = 3;
 $(document).ready(function() {
 
@@ -24,6 +29,7 @@ var messageCollection = new collection();
 
 	$('#chatForm').on('submit', function(e) {
 		e.preventDefault();
+
 
 		$.post('https://chatty-cats.herokuapp.com/rooms/'+chatroomNum+'/chats',
 			{
@@ -44,13 +50,16 @@ messageCollection.on('add', function(show) {
 	$('#main').append(x.$el)
 });
 messageCollection.fetch();
-	
+
 	var $makeYourProfile = $('#make-your-profile');
 	var $joniAChat = $('#join-a-chat');
 	var $learnMore = $('#learn-more');
 	var $startButton = $('#start-button');
 	var $description = $('.description');
 	var $chatButton = $('#chat-button');
+	var $userProfile = $('#user-profile')
+	var $learnMorePage = $('#learn-more-page');
+	var $learnMoreTablet = $('#learn-more-tablet');
 
 	var $chatPage = $('#chatPage');
 	var $main = $('#main');
@@ -58,27 +67,50 @@ messageCollection.fetch();
 	var $chatBox = $('#chatBox');
 	var $submitChat = $('#submitChat');
 
+//***************Calling Views**********************
 
 	var profileView = new makeYourProfileView();
 	var learnMoreViewing = new learnMoreView();
+	var userProfileViewing = new userProfileView();
 
 
 	var Router = Backbone.Router.extend({
 		routes:  {
 			'': 'home',
-			'Chat': 'onChatPage'
+			'Chat': 'onChatPage',
+			'Home': 'onHome',
+			'UserProfile': 'onUserProfile'
 		},
 		home: function() {
 			$makeYourProfile.show();
 			$learnMore.show();
 			$joniAChat.show();
 			$chatPage.hide();
+			$userProfile.hide();
 		},
 		onChatPage: function() {
 			$makeYourProfile.hide();
 			$learnMore.hide();
 			$joniAChat.hide();
 			$chatPage.show();
+			$userProfile.hide();
+			$learnMorePage.hide();
+		},
+		onHome: function() {
+			$makeYourProfile.show();
+			$learnMore.show();
+			$joniAChat.show();
+			$chatPage.hide();
+			$userProfile.hide();
+		},
+		onUserProfile: function() {
+			$makeYourProfile.hide();
+			$learnMore.hide();
+			$joniAChat.hide();
+			$chatPage.hide();
+			$userProfile.show();
+			$learnMorePage.hide();
+			$learnMoreTablet.hide();
 		}
 	});
 	var foo = new Router();
@@ -86,7 +118,7 @@ messageCollection.fetch();
 
 
 var populate = function() {
-	
+
 	var url = 'https://chatty-cats.herokuapp.com/rooms';
 	$.ajax
 	({
@@ -97,9 +129,9 @@ var populate = function() {
     	$('#groupSelectDrop').append('<option id="'+i+'"value="'+i+'">' + response[i].name+'</option>')
     	}
 	}
-    	
-    	
-    
+
+
+
 	})
 
 }
@@ -114,7 +146,7 @@ var switchGroup = function() {
 			var newModel = new chatModel(model);
 			var newChatRoomMessage = new chatView({model:newModel})
 			$('#main').append(newChatRoomMessage.$el);
-		});	
+		});
 	});
 	
 
@@ -129,9 +161,12 @@ var createNewGroup = function(e) {
 
 $('#groupSelectDrop').on('change', switchGroup);
 $('#submitNewChat').on('click', createNewGroup);
+
+
 var newChat = function() {
 	$('#newChatView').toggle();
 }
+
 
 $('#usersPop').on('click', newChat);
 });

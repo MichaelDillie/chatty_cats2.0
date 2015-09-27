@@ -26,7 +26,8 @@ module.exports = Backbone.View.extend({
 		var email = $email.val();
 		var password = $password.val();
 		var retype = $retype.val();
-		var $passwordError = $('#password-error');
+		var $passwordError1 = $('#password-error1');
+		var $passwordError2 = $('#password-error2');
 		var $form = $('#make-profile-form')
 	 	function onStartClick() {
 			$joinAChat.hide();
@@ -106,6 +107,8 @@ module.exports = Backbone.View.extend({
 			$retype.hide();
 			$cancelBtn.hide();
 			$joinBtn.hide();
+			$passwordError1.hide();
+			$passwordError2.hide();
 			$makeYourProfile.css('height', '9em');
 		}
 		$cancelBtn.on('click', onCancelClick);
@@ -117,11 +120,13 @@ module.exports = Backbone.View.extend({
 			var email = $email.val();
 			var password = $password.val();
 			var retype = $retype.val();
-			var $passwordError = $('#password-error');
+			var $passwordError1 = $('#password-error1');
+			var $passwordError2 = $('#password-error2');
 
-			if(password === retype) {
+			if(password === retype && password.length > 6) {
 				console.log('good')
-				$passwordError.hide();
+				$passwordError1.hide();
+				$passwordError2.hide();
 
 				$.post(
 					'https://chatty-cats.herokuapp.com/users', {
@@ -131,9 +136,24 @@ module.exports = Backbone.View.extend({
 						about: password
 					}
 				)
-			} else {
-				$passwordError.show();
+			} else if(password !== retype) {
+				$passwordError2.hide();
+				$passwordError1.show();
+				$password.css('borderColor', 'red');
+				$retype.css('borderColor', 'red');
+				console.log(password.length);
 
+			} else if(password !== retype && password.length < 6) {
+				$passwordError2.show();
+				$passwordError1.show();
+				$password.css('borderColor', 'red');
+				$retype.css('borderColor', 'red');
+				console.log(password.length)
+			} else {
+				$passwordError2.show();
+				$passwordError1.hide();
+				$password.css('borderColor', 'red');
+				$retype.css('borderColor', 'red');
 			}
 		});
 	}
