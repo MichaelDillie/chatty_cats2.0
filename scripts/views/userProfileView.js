@@ -40,7 +40,7 @@ module.exports = Backbone.View.extend({
 				method: 'GET',
 				success: function(response) {
 					for(var i = 0; i < 1; i++) {
-						$usersUsername.append('<option id="' + i + '">' + 'User Name: ' + '</option>' + '<div>' + response[1].username + '</div>')
+						$usersUsername.append('<option id="' + i + '">' + 'Welcome Back ' + '</option>' + '<div>' + response[1].username + '</div>')
 					}
 				}
 			});
