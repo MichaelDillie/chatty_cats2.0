@@ -14,7 +14,7 @@ var makeYourProfileModel = require('./models/makeYourProfileModel.js');
 
 var chatView = require('./views/listView.js');
 var chatModel = require('./models/listModel.js');
-var chatGoup = require('./models/groupModel.js')
+var chatGroup = require('./models/groupModel.js');
 
 
 //****************User Page**********************
@@ -154,7 +154,12 @@ var switchGroup = function() {
 var createNewGroup = function(e) {
 	e.preventDefault();
 	console.log('New Group Button Clicked!');
+	var input = $('#newChatInput').val();
 	var newGroup = new chatGroup();
+	newGroup.save({name: input},{success: function() {
+		console.log(newgroup.id);
+		chatroomNum = newGroup.id;
+	}})
 
 
 }

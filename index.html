@@ -20,7 +20,7 @@
 	<section>
 	<div id="newChatView">
 		<select id="groupSelectDrop"></select>
-		<input type="text" id="newChatInput" placeholder="Name your chat"/>
+		<div><input type="text" id="newChatInput" placeholder="Name your chat"/></div>
 		<div><button id="submitNewChat">Submit</button></div>
 	</div>
 	<img id="usersPop" src="./images/usertab.png"/>
@@ -101,9 +101,6 @@
 	<div id="chatView"></div>
 </script>
 <!-- individual chat -->
-<script type="text/template" id="indChat">
-	<div id="indChat" class="singleChatClass"><%=message%></div>
-</script>
 <script type="text/template" id="listOfMessages">
 	<div><%- user_id %> : <%- message %></div>
 </script>
