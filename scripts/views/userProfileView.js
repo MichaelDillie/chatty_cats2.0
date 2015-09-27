@@ -19,10 +19,58 @@ module.exports = Backbone.View.extend({
 		var $userName = $('.make-profile-username');
 		var $email = $('.make-profile-email');
 
-		var url = 'https://chatty-cats.herokuapp.com/users';
-		$.ajax({
-			url: url,
-			method: 'GET',
-		})
 
+		// function user() {
+		// 	var url = 'https://chatty-cats.herokuapp.com/users';
+		// 	$.ajax({
+		// 		url: url,
+		// 		method: 'GET',
+		// 		success: function(response) {
+		// 			for(var i = 0; i < 1; i++) {
+		// 				$usersUsername.append('<option id="' + i + '">' + response[1].id + '</option>')
+		// 			}
+		// 		}
+		// 	});
+		// }
+		// user();
+		function profileUserName() {
+			var url = 'https://chatty-cats.herokuapp.com/users';
+			$.ajax({
+				url: url,
+				method: 'GET',
+				success: function(response) {
+					for(var i = 0; i < 1; i++) {
+						$usersUsername.append('<option id="' + i + '">' + 'User Name: ' + '</option>' + '<div>' + response[1].username + '</div>')
+					}
+				}
+			});
+		}
+		profileUserName();
+		function profileName() {
+			var url = 'https://chatty-cats.herokuapp.com/users';
+			$.ajax({
+				url: url,
+				method: 'GET',
+				success: function(response) {
+					for(var i = 0; i < 1; i++) {
+						$usersName.append('<option id="' + i + '">' + 'Name: ' + '</option>' + '<div>' + response[1].name + '</div>')
+					}
+				}
+			});
+		}
+		profileName();
+		function profileEmail() {
+			var url = 'https://chatty-cats.herokuapp.com/users';
+			$.ajax({
+				url: url,
+				method: 'GET',
+				success: function(response) {
+					for(var i = 0; i < 1; i++) {
+						$usersEmail.append('<option id="' + i + '">' + 'Email: '  + '</option>' + '<div>' + response[1].email + '</div>')
+					}
+				}
+			});
+		}
+		profileEmail();
+	}
 });

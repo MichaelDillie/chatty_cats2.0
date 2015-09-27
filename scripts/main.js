@@ -41,6 +41,7 @@ $(document).ready(function() {
 	var $chatButton = $('#chat-button');
 	var $userProfile = $('#user-profile')
 	var $learnMorePage = $('#learn-more-page');
+	var $learnMoreTablet = $('#learn-more-tablet');
 
 	var $chatPage = $('#chatPage');
 	var $main = $('#main');
@@ -91,6 +92,7 @@ $(document).ready(function() {
 			$chatPage.hide();
 			$userProfile.show();
 			$learnMorePage.hide();
+			$learnMoreTablet.hide();
 		}
 	});
 	var foo = new Router();
