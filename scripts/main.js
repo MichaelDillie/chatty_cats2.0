@@ -61,6 +61,7 @@ messageCollection.fetch();
 	var $userProfile = $('#user-profile')
 	var $learnMorePage = $('#learn-more-page');
 	var $learnMoreTablet = $('#learn-more-tablet');
+	var $chatArea = $('#profile-area');
 
 	var $chatPage = $('#chatPage');
 	var $main = $('#main');
@@ -89,6 +90,7 @@ messageCollection.fetch();
 			$chatPage.hide();
 			$userProfile.hide();
 			$('#usersPop').hide();
+			$profileArea.hide();
 		},
 		onChatPage: function() {
 			$makeYourProfile.hide();
@@ -99,6 +101,8 @@ messageCollection.fetch();
 			$learnMorePage.hide();
 			$('#usersPop').show();
 			$learnMoreTablet.hide();
+			$profileArea.hide();
+
 		},
 		onHome: function() {
 			$makeYourProfile.show();
@@ -107,6 +111,7 @@ messageCollection.fetch();
 			$chatPage.hide();
 			$userProfile.hide();
 			$('#usersPop').hide();
+			$profileArea.hide();
 		},
 		onUserProfile: function() {
 			$makeYourProfile.hide();
