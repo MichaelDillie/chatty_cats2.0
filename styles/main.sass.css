@@ -1,6 +1,11 @@
 #main {
-  background-color: pink;
-  background-overflow-y: hidden; }
+  background: pink;
+  overflow-y: scroll;
+  line-height: 1.2em;
+  padding-left: .5em;
+  border: 1px solid black;
+  margin-right: 0;
+  max-height: 30em; }
 
 #usersPop {
   background: transparent;
@@ -9,18 +14,29 @@
   float: right; }
 
 #newChatView {
+  border-radius: 5%;
   display: none;
   float: right;
-  margin: 5% auto;
   background: pink;
   text-align: center;
   padding: 2em 0;
   margin: 0 auto;
-  width: 50%;
+  width: 30%;
   border: 1px solid black; }
 
+<<<<<<< HEAD
 body {
   background-color: gray; }
+=======
+#listOfMessages {
+  margin: .2em 0; }
+
+#newChatInput {
+  width: 50%; }
+
+body {
+  background-color: #706360; }
+>>>>>>> c101ac1480007387db56985381dfb17283218107
 
 a {
   text-decoration: none;
@@ -31,11 +47,16 @@ a {
 
 nav {
   height: 4em;
+<<<<<<< HEAD
   background-color: #2D7DA2; }
+=======
+  background-color: #9888A5; }
+>>>>>>> c101ac1480007387db56985381dfb17283218107
   nav a {
     text-decoration: none; }
   nav #logo {
     font-family: 'Bubblegum Sans', cursive;
+<<<<<<< HEAD
     color: #445552;
     float: left;
     color: black; }
@@ -51,6 +72,12 @@ nav {
 
 #make-your-profile {
   background-color: pink;
+=======
+    color: #445552; }
+
+#make-your-profile {
+  background-color: #10A4A2;
+>>>>>>> c101ac1480007387db56985381dfb17283218107
   height: 9em;
   margin: 1em 0.5em;
   text-align: center;
@@ -60,13 +87,7 @@ nav {
     font-weight: 900;
     font-size: 2em;
     line-height: 1em; }
-  #make-your-profile #password-error1 {
-    display: none;
-    color: #300000;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    font-size: 1em; }
-  #make-your-profile #password-error2 {
+  #make-your-profile #password-error {
     display: none;
     color: #300000;
     font-family: 'Roboto', sans-serif;
@@ -77,8 +98,12 @@ nav {
     font-weight: 300;
     font-size: 1em; }
   #make-your-profile #start-button {
+<<<<<<< HEAD
     background-color: black;
     color: white;
+=======
+    background-color: #FBEDDA;
+>>>>>>> c101ac1480007387db56985381dfb17283218107
     border: .01em solid;
     margin-top: 1.5em;
     font-size: 1.5em;
@@ -87,8 +112,12 @@ nav {
   #make-your-profile #make-profile-form {
     display: inline-block; }
   #make-your-profile #join {
+<<<<<<< HEAD
     background-color: black;
     color: white;
+=======
+    background-color: #FBEDDA;
+>>>>>>> c101ac1480007387db56985381dfb17283218107
     display: none;
     border: .01em solid;
     margin-top: 1.5em;
@@ -96,8 +125,12 @@ nav {
     font-family: 'Roboto', sans-serif;
     padding: 0.1em 0.75em; }
   #make-your-profile #cancel-profile {
+<<<<<<< HEAD
     background-color: black;
     color: white;
+=======
+    background-color: #FBEDDA;
+>>>>>>> c101ac1480007387db56985381dfb17283218107
     display: none;
     border: .01em solid;
     margin-top: 1.5em;
@@ -105,23 +138,22 @@ nav {
     font-family: 'Roboto', sans-serif;
     padding: 0.1em 0.75em; }
   #make-your-profile .make-profile-name {
-    display: none;
-    background-color: #DADADA; }
+    display: none; }
   #make-your-profile .make-profile-username {
-    display: none;
-    background-color: #DADADA; }
+    display: none; }
   #make-your-profile .make-profile-email {
-    display: none;
-    background-color: #DADADA; }
+    display: none; }
   #make-your-profile .make-profile-password {
-    display: none;
-    background-color: #DADADA; }
+    display: none; }
   #make-your-profile .make-profile-retype {
-    display: none;
-    background-color: #DADADA; }
+    display: none; }
 
 #join-a-chat {
+<<<<<<< HEAD
   background-color: pink;
+=======
+  background-color: #10A4A2;
+>>>>>>> c101ac1480007387db56985381dfb17283218107
   height: 9em;
   margin: 1em 0.5em;
   text-align: center;
@@ -136,14 +168,19 @@ nav {
     font-weight: 300;
     font-size: 1em; }
   #join-a-chat #chat-button {
+<<<<<<< HEAD
     background-color: black;
     color: white;
+=======
+    background-color: #FBEDDA;
+>>>>>>> c101ac1480007387db56985381dfb17283218107
     border: .01em solid;
     margin-top: 1.5em;
     font-size: 1.5em;
     font-family: 'PT Sans', sans-serif;
     padding: 0.1em 0.75em; }
 
+<<<<<<< HEAD
 #learn-more-btn-wrapper {
   text-align: center; }
   #learn-more-btn-wrapper #learn-more {
@@ -158,6 +195,19 @@ nav {
 #learn-more-page {
   display: none;
   background-color: pink;
+=======
+#learn-more {
+  background-color: #FBEDDA;
+  border: .01em solid;
+  margin: 0.5em 3.15em;
+  font-size: 1.5em;
+  font-family: 'PT Sans', sans-serif;
+  padding: 0.1em 0.75em; }
+
+#learn-more-page {
+  display: none;
+  background-color: #10A4A2;
+>>>>>>> c101ac1480007387db56985381dfb17283218107
   height: 25em;
   margin: 1em 0.5em;
   padding: 1em 1em 0 1em;
@@ -171,8 +221,12 @@ nav {
     font-weight: 300;
     border: .1em solid black; }
   #learn-more-page #close {
+<<<<<<< HEAD
     background-color: black;
     color: white;
+=======
+    background-color: #FBEDDA;
+>>>>>>> c101ac1480007387db56985381dfb17283218107
     border: .01em solid;
     margin-top: .5em;
     font-size: 1.5em;
@@ -264,13 +318,17 @@ nav {
     height: 20em;
     float: left; }
     #join-a-chat #chat-button {
+<<<<<<< HEAD
+      margin-top: 2.75em; }
+=======
       margin-top: 2.75em;
       background-color: #D87B00; }
+>>>>>>> 92931042e2e2b4d76d7447efd43c6317e7da2641
   #learn-more-tablet {
     width: 31%;
     display: inline-block;
     height: 20em;
-    background-color: #007481;
+    background-color: #10A4A2;
     margin: 1em 0.5em;
     text-align: center;
     padding-top: 1em; }
@@ -283,7 +341,7 @@ nav {
       font-weight: 300;
       font-size: 1em; }
     #learn-more-tablet #learn-more-btn-tablet {
-      background-color: #D87B00;
+      background-color: #FBEDDA;
       border: .01em solid;
       margin-top: 1.5em;
       font-size: 1.5em;

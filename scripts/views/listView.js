@@ -2,7 +2,6 @@
 var $ = require('jquery');
 var Backbone = require('backbone');
 var _ = require('backbone/node_modules/underscore');
-var listModel = require('../models/listModel.js');
 
 
 module.exports = Backbone.View.extend({
