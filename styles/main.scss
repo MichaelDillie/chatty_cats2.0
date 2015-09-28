@@ -1,11 +1,12 @@
 
 #main {
 		background: pink;
-		overflow-y: hidden;
+		overflow-y: scroll;
 		line-height: 1.2em;
 		padding-left: .5em;
 		border: 1px solid black;
 		margin-right: 0;
+		max-height: 30em;
 	}
 
 #usersPop {
