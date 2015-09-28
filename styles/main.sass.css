@@ -175,26 +175,62 @@ nav {
   background-color: green;
   margin-left: .5em;
   margin-top: .5em;
-  float: left; }
+  border-radius: 5em; }
 
 #user-profile #users-username {
   margin-top: .5em;
-  float: right; }
-
-#user-profile #users-name {
-  width: 6.9em;
-  border: .1em solid black;
-  margin-top: .5em;
   margin-left: .5em; }
+  #user-profile #users-username option {
+    font-family: 'PT Sans', sans-serif;
+    line-height: .5em; }
+  #user-profile #users-username div {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 900;
+    font-style: bold;
+    line-height: .2em;
+    margin-left: .4em; }
 
 #user-profile #users-email {
-  width: 6.9em;
-  border: .1em solid black;
-  margin-top: .5em;
+  display: block;
+  margin-top: 1em;
   margin-left: .5em; }
+  #user-profile #users-email option {
+    font-family: 'PT Sans', sans-serif; }
+  #user-profile #users-email div {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    line-height: .8em; }
+
+#user-profile #splitter {
+  height: .2em;
+  width: 90%;
+  background-color: black;
+  margin-left: 5%;
+  margin-top: 1em; }
+
+#user-profile #about {
+  margin: 1em 0em 0em 1em;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 900; }
+
+#user-profile #about-area {
+  padding: 5%;
+  width: 79%;
+  background-color: transparent;
+  margin-left: 5%;
+  border: .1em solid;
+  font-family: 'PT Sans', sans-serif; }
+
+#footer {
+  height: 6em;
+  background-color: red; }
 
 #learn-more-tablet {
   display: none; }
+
+#profile-area {
+  margin-bottom: .5em; }
 
 @media screen and (min-width: 768px) {
   #make-your-profile {
@@ -210,22 +246,6 @@ nav {
     #join-a-chat #chat-button {
       margin-top: 2.75em;
       background-color: #D87B00; }
-  #user-profile #user-profile-pic {
-    height: 7em;
-    width: 7em;
-    background-color: green; }
-  #user-profile #users-username {
-    width: 6.9em;
-    border: .1em solid black;
-    margin-top: .5em; }
-  #user-profile #users-name {
-    width: 6.9em;
-    border: .1em solid black;
-    margin-top: .5em; }
-  #user-profile #users-email {
-    width: 6.9em;
-    border: .1em solid black;
-    margin-top: .5em; }
   #learn-more-tablet {
     width: 31%;
     display: inline-block;
