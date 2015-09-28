@@ -14,7 +14,7 @@ var makeYourProfileModel = require('./models/makeYourProfileModel.js');
 
 var chatView = require('./views/listView.js');
 var chatModel = require('./models/listModel.js');
-var chatGoup = require('./models/groupModel.js')
+var chatGroup = require('./models/groupModel.js');
 
 
 //****************User Page**********************
@@ -22,32 +22,33 @@ var userProfileModel = require('./models/userProfileModel.js');
 var	userProfileView = require('./views/userProfileView.js')
 
 
-var chatroomNum = 3;
+var chatroomNum = 1;
 $(document).ready(function() {
 
 var messageCollection = new collection();
 
 	$('#chatForm').on('submit', function(e) {
 		e.preventDefault();
+		console.log('attempting post');
 
 
-		$.post('https://chatty-cats.herokuapp.com/rooms/'+chatroomNum+'/chats',
+		$.post('https://chatty-cats.herokuapp.com/chats',
 			{
-				room_name: 'Wrapsafe',
 		        message: $('#chatBox').val(),
-		        user_id: 0,
-		        room_id: chatroomNum,
-		        created_at: 0,
-		        updated_at: 0
+		        user_id: 5,
+		        room_id: chatroomNum
 			}).done(function(data){
 				console.log('ran and got back', data);
+				messageCollection.fetch();
+				$('#chatBox').val('');
 			});
-	});
+	}); 	
 
 
 messageCollection.on('add', function(show) {
+	console.log('added');
 	var x = new chatView({model: show});
-	$('#main').append(x.$el)
+	$('#main').prepend(x.$el)
 });
 messageCollection.fetch();
 
@@ -135,7 +136,7 @@ var populate = function() {
     url: url,
     method: 'GET',
     success: function(response) {
-		for (var i=0;i<response.length;i++){
+		for (var i=1;i<response.length;i++){
     	$('#groupSelectDrop').append('<option id="'+i+'"value="'+i+'">' + response[i].name+'</option>')
     	}
 	}
@@ -164,10 +165,34 @@ var switchGroup = function() {
 var createNewGroup = function(e) {
 	e.preventDefault();
 	console.log('New Group Button Clicked!');
+	var input = $('#newChatInput').val();
 	var newGroup = new chatGroup();
+	$.post('https://chatty-cats.herokuapp.com/rooms',
+			{
+		        name: input,
+		        
+			}).done(function(data){
+				console.log('getting group ID');
+				console.log(data.id);
+			chatroomNum = data.id;
+				console.log('created new room', data);
+				$('#main').html('');
+			})
+			$.get('https://chatty-cats.herokuapp.com/rooms/'+chatroomNum+'/chats').done(function(data){
+		data.forEach(function(model){
+			console.log('populate new room');
+			var newModel = new chatModel(model);
+			var newChatRoomMessage = new chatView({model:newModel})
+			$('#main').prepend(newChatRoomMessage.$el);
+		})
 
-
+// END OF IT 
+	})
 }
+
+
+
+
 
 $('#groupSelectDrop').on('change', switchGroup);
 $('#submitNewChat').on('click', createNewGroup);

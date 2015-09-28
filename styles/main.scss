@@ -1,10 +1,14 @@
 
 #main {
-	background: {
-		color: pink;
-		overflow-y: hidden;
+		background: pink;
+		overflow-y: scroll;
+		line-height: 1.2em;
+		padding-left: .5em;
+		border: 1px solid black;
+		margin-right: 0;
+		max-height: 30em;
 	}
-}
+
 #usersPop {
 	background: transparent;
 	height: 2em;
@@ -17,19 +21,25 @@
 
 }
 #newChatView {
+	border-radius: 5%;
 	display: none;
 	float: right;
-	margin: 5% auto;
 	background: pink;
 	text-align: center;
 	padding: 2em 0;
 	margin: 0 auto;
-	width: 50%;
+	width: 30%;
 	border: 1px solid black;
+}
+#listOfMessages {
+	margin: .2em 0;
+}
+#newChatInput {
+	width: 50%;
 }
 
 body {
- // background-color: #000511;
+ background-color: #706360;
 }
 
 a {
@@ -43,7 +53,7 @@ a {
 
 nav {
 	height: 4em;
-	background-color: #8C3228;
+	background-color: #9888A5;
 
 	a {
 		text-decoration: none;
@@ -52,23 +62,11 @@ nav {
 	#logo {
 		font-family: 'Bubblegum Sans', cursive;
 		color: #445552;
-		float: left;
-	}
-
-	#profile-button {
-		background-color: transparent;
-	    border: .1em solid;
-	    height: 2.5em;
-	    width: 2.5em;
-	    margin-top: .75em;
-	    float: right;
-	    padding-right: .5em;
-	    margin-right: .3em;
 	}
 }
 
 #make-your-profile {
-    background-color: #007481;
+    background-color: #10A4A2;
     height: 9em;
     margin: 1em 0.5em;
     text-align: center;
@@ -81,15 +79,7 @@ nav {
     	line-height: 1em;
     }
 
-    #password-error1 {
-    	display: none;
-		color: #300000;
-		font-family: 'Roboto', sans-serif;
-		font-weight: 100;
-		font-size: 1em;
-	}
-
-	#password-error2 {
+    #password-error {
     	display: none;
 		color: #300000;
 		font-family: 'Roboto', sans-serif;
@@ -104,7 +94,7 @@ nav {
     }
 
     #start-button {
-    	background-color: #D87B00;
+    	background-color: #FBEDDA;
     	border: .01em solid;
 	    margin-top: 1.5em;
 	    font-size: 1.5em;
@@ -117,7 +107,7 @@ nav {
 	}
 
 	#join {
-		background-color: #D87B00;
+		background-color: #FBEDDA;
 		display: none;
 		border: .01em solid;
 	    margin-top: 1.5em;
@@ -127,7 +117,7 @@ nav {
 	}
 
 	#cancel-profile {
-		background-color: #D87B00;
+		background-color: #FBEDDA;
 		display: none;
 		border: .01em solid;
 	    margin-top: 1.5em;
@@ -138,29 +128,24 @@ nav {
 
 	.make-profile-name {
 		display: none;
-		background-color: #DADADA;
 	}
 	.make-profile-username {
 		display: none;
-		background-color: #DADADA;
 	}
 	.make-profile-email {
 		display: none;
-		background-color: #DADADA;
 	}
 	.make-profile-password {
 		display: none;
-		background-color: #DADADA;
 	}
 	.make-profile-retype {
 		display: none;
-		background-color: #DADADA;
 	}
 
 }
 
 #join-a-chat {
-    background-color: #007481;
+    background-color: #10A4A2;
     height: 9em;
     margin: 1em 0.5em;
     text-align: center;
@@ -180,7 +165,7 @@ nav {
     }
 
     #chat-button {
-    	background-color: #D87B00;
+    	background-color: #FBEDDA;
     	border: .01em solid;
 	    margin-top: 1.5em;
 	    font-size: 1.5em;
@@ -189,23 +174,18 @@ nav {
 	}
 }
 
-#learn-more-btn-wrapper {
-
-	text-align: center;
-
-	#learn-more {
-		background-color: #D87B00;
-		border: .01em solid;
-    	margin: .5em 3.15em;
-    	font-size: 1.5em;
-    	font-family: 'PT Sans', sans-serif;
-    	padding: .1em .75em;
-	}
+#learn-more {
+	background-color: #FBEDDA;
+	border: .01em solid;
+    margin: .5em 3.15em;
+    font-size: 1.5em;
+    font-family: 'PT Sans', sans-serif;
+    padding: .1em .75em;
 }
 
 #learn-more-page {
 	display: none;
-	background-color: #007481;
+	background-color: #10A4A2;
 	height: 25em;
 	margin: 1em 0.5em;
 	padding: 1em 1em 0 1em;
@@ -225,7 +205,7 @@ nav {
 	}
 
 	#close {
-		background-color: #D87B00;
+		background-color: #FBEDDA;
 		border: .01em solid;
 	    margin-top: .5em;
 	    font-size: 1.5em;
@@ -350,51 +330,16 @@ nav {
 
     	#chat-button {
     		margin-top: 2.75em;
-    		background-color: #D87B00
     	}
 	}
 
-// 	#user-profile {
 
-// 	// #settings {
-// 	// 	float: right;
-// 	// }
-
-// 	// #settings-box {
-// 	// 	height: 1em;
-// 	// 	width: 1em;
-// 	// 	background-color: red;
-// 	// 	float: right;
-// 	// }
-
-// 	#user-profile-pic {
-// 		height: 7em;
-// 		width: 7em;
-// 		background-color: green;
-// 	}
-
-// 	#users-username {
-// 		width: 6.9em;
-// 		border: .1em solid black;
-// 		margin-top: .5em;
-// 	}
-// 	#users-name {
-// 		width: 6.9em;
-// 		border: .1em solid black;
-// 		margin-top: .5em;
-// 	}
-// 	#users-email {
-// 		width: 6.9em;
-// 		border: .1em solid black;
-// 		margin-top: .5em;
-// 	}
-// }
 
 	#learn-more-tablet {
 		width: 31%;
 		display: inline-block;
 		height: 20em;
-		background-color: #007481;
+		background-color: #10A4A2;
     	margin: 1em 0.5em;
     	text-align: center;
     	padding-top: 1em;
@@ -412,7 +357,7 @@ nav {
     	}
 
     	#learn-more-btn-tablet {
-			background-color: #D87B00;
+			background-color: #FBEDDA;
     		border: .01em solid;
 	    	margin-top: 1.5em;
 	    	font-size: 1.5em;
