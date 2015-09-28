@@ -28,7 +28,7 @@ module.exports = Backbone.View.extend({
 		var retype = $retype.val();
 		var $passwordError1 = $('#password-error1');
 		var $passwordError2 = $('#password-error2');
-		var $form = $('#make-profile-form')
+		var $form = $('#make-profile-form');
 	 	function onStartClick() {
 			$joinAChat.hide();
 			$learnMore.hide();

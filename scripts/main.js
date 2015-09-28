@@ -60,7 +60,7 @@ messageCollection.fetch();
 	var $userProfile = $('#user-profile')
 	var $learnMorePage = $('#learn-more-page');
 	var $learnMoreTablet = $('#learn-more-tablet');
-	var $chatArea = $('#profile-area');
+	var $profileArea = $('#profile-area');
 
 	var $chatPage = $('#chatPage');
 	var $main = $('#main');
@@ -90,6 +90,7 @@ messageCollection.fetch();
 			$userProfile.hide();
 			$('#usersPop').hide();
 			$profileArea.hide();
+			$('#newChatView').hide();
 		},
 		onChatPage: function() {
 			$makeYourProfile.hide();
@@ -111,6 +112,7 @@ messageCollection.fetch();
 			$userProfile.hide();
 			$('#usersPop').hide();
 			$profileArea.hide();
+			$('#newChatView').hide();
 		},
 		onUserProfile: function() {
 			$makeYourProfile.hide();
@@ -121,6 +123,7 @@ messageCollection.fetch();
 			$learnMorePage.hide();
 			$learnMoreTablet.hide();
 			$('#usersPop').hide();
+			$('#newChatView').hide();
 		}
 	});
 	var foo = new Router();
