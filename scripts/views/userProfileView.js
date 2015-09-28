@@ -40,7 +40,8 @@ module.exports = Backbone.View.extend({
 				method: 'GET',
 				success: function(response) {
 					for(var i = 0; i < 1; i++) {
-						$usersUsername.append('<option id="' + i + '">' + 'Welcome Back ' + '</option>' + '<div>' + response[1].username + '</div>')
+						$usersUsername.append('<option>' + 'Welcome Back ' + '</option>')
+						$usersUsername.append('<div>' + response[1].username + '</div>')
 					}
 				}
 			});
@@ -53,7 +54,7 @@ module.exports = Backbone.View.extend({
 				method: 'GET',
 				success: function(response) {
 					for(var i = 0; i < 1; i++) {
-						$usersName.append('<option id="' + i + '">' + 'Name: ' + '</option>' + '<div>' + response[1].name + '</div>')
+						$usersName.append('<option>' + 'Name: ' + '</option>' + '<div>' + response[1].name + '</div>')
 					}
 				}
 			});
@@ -66,7 +67,8 @@ module.exports = Backbone.View.extend({
 				method: 'GET',
 				success: function(response) {
 					for(var i = 0; i < 1; i++) {
-						$usersEmail.append('<option id="' + i + '">' + 'Email: '  + '</option>' + '<div>' + response[1].email + '</div>')
+						$usersEmail.append('<option>' + 'Email - '  + '</option>')
+						$usersEmail.append('<div>' + response[1].email + '</div>')
 					}
 				}
 			});
